@@ -6,6 +6,7 @@
 
 ``` bash
 # install dependencies
+add this package to your package.json: https://www.npmjs.com/package/vue-test-current-time
 npm install
 
 # serve with hot reload at localhost:8080
