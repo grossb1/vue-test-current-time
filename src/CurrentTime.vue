@@ -56,13 +56,20 @@ export default {
       })
     },
     handleClick: function(event) {
+      if(this.buttonClicked) {
         eval(this.buttonClicked)(this.tz, event);
+      }
+    },
+    handleTimeZoneChanged: function() {
+      if(this.timeZoneChanged) {
+        eval(this.timeZoneChanged)(this.tz);
+      }
     }
   },
   watch: {
     tz: function() {
       this.getTime(this.tz);
-       eval(this.timeZoneChanged)(this.tz);
+        this.handleTimeZoneChanged();
     }
   }
 }
