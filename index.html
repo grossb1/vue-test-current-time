@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="icon" href="/dist/logo.png">
+  <!--<script src="https://unpkg.com/axios/dist/axios.min.js"></script>-->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.timeZoneChanged = function(tz) {
+          alert("Time-zone updated to: " + tz);
+        }
+
+        document.buttonClicked = function(tz, event) {
+          alert("Button clicked: Current time-zone: " + tz);
+        }
+    })
+
+  </script>
+  <head>
+    <meta charset="utf-8">
+    <title>vue-test-current-time</title>
+  </head>
+  <body>
+    <div id="listener"></div>
+    <div id="app">
+      <current-time selected="Africa/Accra" time-zone-changed="document.timeZoneChanged" button-clicked="document.buttonClicked"></current-time>
+    </div>
+    <script src="/dist/build.js"></script>
+  </body>
+</html>
