@@ -1,4 +1,4 @@
-# vue-test-wp-simple
+# vue-test-current-time
 
 > A Vue.js project
 
