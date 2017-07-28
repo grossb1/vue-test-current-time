@@ -9,10 +9,32 @@
 npm install
 
 # serve with hot reload at localhost:8080
-npm run dev
+Here is a very basic usage:
 
-# build for production with minification
-npm run build
-```
+<html>
+   
+    <link rel="icon" href="/node_modules/vue-test-current-time/logo.png">
+     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.timeZoneChanged = function(tz) {
+            alert("Time-zone updated to: " + tz);
+            }
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+            document.buttonClicked = function(tz, event) {
+            alert("Button clicked: Current time-zone: " + tz);
+            }
+        })
+
+  </script>
+    <title>VUE-NPM-TEST</title>
+    <head>
+        <meta charset="utf-8">
+        <title>vue-test-current-time</title>
+    </head>
+    <body>
+        <div id="app">
+            <current-time selected="Africa/Accra" time-zone-changed="document.timeZoneChanged" button-clicked="document.buttonClicked"></current-time>
+        </div>
+    </body>
+     <script src="/node_modules/vue-test-current-time/build.js"></script>
+</html>
