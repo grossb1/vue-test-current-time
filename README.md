@@ -9,9 +9,7 @@
 add this package to your package.json: https://www.npmjs.com/package/vue-test-current-time
 npm install
 
-# serve with hot reload at localhost:8080
-Here is a very basic usage:
-
+# Example
 <html>
    
     <link rel="icon" href="/node_modules/vue-test-current-time/logo.png">
