@@ -3,6 +3,6 @@ import CurrentTime from './CurrentTime.vue'
 
 Vue.component('current-time', CurrentTime);
 
-new Vue({
+window.app = new Vue({
   el: '#app'
 })

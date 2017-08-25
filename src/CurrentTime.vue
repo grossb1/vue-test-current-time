@@ -64,6 +64,9 @@ export default {
       if(this.timeZoneChanged) {
         eval(this.timeZoneChanged)(this.tz);
       }
+    },
+    raiseAlert: function() {
+      alert("responding to external button click")
     }
   },
   watch: {

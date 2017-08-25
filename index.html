@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <link rel="icon" href="/dist/logo.png">
-  <!--<script src="https://unpkg.com/axios/dist/axios.min.js"></script>-->
+  
   <script>
     document.addEventListener('DOMContentLoaded', function() {
         document.timeZoneChanged = function(tz) {
@@ -19,10 +19,16 @@
     <title>vue-test-current-time</title>
   </head>
   <body>
-    <div id="listener"></div>
+    <h1>Vue.js</h1>
     <div id="app">
-      <current-time selected="Africa/Accra" time-zone-changed="document.timeZoneChanged" button-clicked="document.buttonClicked"></current-time>
+      <current-time ref="ct" selected="Africa/Accra" time-zone-changed="document.timeZoneChanged" button-clicked="document.buttonClicked"></current-time>
     </div>
+    <button id="externalButton">ExternalButton</button>
     <script src="/dist/build.js"></script>
+    <script>
+      document.getElementById("externalButton").onclick = function() {
+        window.app.$refs.ct.raiseAlert();
+      }
+    </script>
   </body>
 </html>
